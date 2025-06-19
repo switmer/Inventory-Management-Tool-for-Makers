@@ -1,0 +1,105 @@
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THE ABOVE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@layer base {
+  :root {
+    --background: 24 38% 98%;
+    --foreground: 20 10% 19%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 19%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 19%;
+    --primary: 16 80% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 32 38% 97%;
+    --secondary-foreground: 20 10% 19%;
+    --muted: 32 30% 92%;
+    --muted-foreground: 20 10% 40%;
+    --accent: 32 30% 88%;
+    --accent-foreground: 20 10% 19%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 32 38% 88%;
+    --input: 32 38% 88%;
+    --ring: 16 80% 55%;
+    --radius: 0.5rem;
+    /* Etsy-inspired colors */
+    --apricot: 24 80% 91%;
+    --clay: 42 30% 88%;
+    --olive: 84 16% 48%;
+    --taupe: 33 24% 54%;
+    --sienna: 24 40% 39%;
+    /* Chart colors */
+    --chart-1: 16 80% 55%;
+    --chart-2: 33 24% 54%;
+    --chart-3: 84 16% 48%;
+    --chart-4: 24 40% 39%;
+    --chart-5: 42 30% 68%;
+  }
+  :root[class~="dark"] {
+    --background: 20 14% 8%;
+    --foreground: 30 10% 92%;
+    --card: 20 14% 12%;
+    --card-foreground: 30 10% 92%;
+    --popover: 20 14% 14%;
+    --popover-foreground: 30 10% 92%;
+    --primary: 16 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 14% 16%;
+    --secondary-foreground: 30 10% 92%;
+    --muted: 20 14% 18%;
+    --muted-foreground: 30 10% 70%;
+    --accent: 20 14% 18%;
+    --accent-foreground: 30 10% 92%;
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 20 14% 22%;
+    --input: 20 14% 22%;
+    --ring: 16 70% 55%;
+    /* Etsy-inspired dark mode colors */
+    --apricot: 24 30% 40%;
+    --clay: 42 15% 35%;
+    --olive: 84 12% 35%;
+    --taupe: 33 15% 40%;
+    --sienna: 24 30% 30%;
+    /* Chart colors */
+    --chart-1: 16 70% 55%;
+    --chart-2: 33 20% 50%;
+    --chart-3: 84 12% 45%;
+    --chart-4: 24 30% 40%;
+    --chart-5: 42 20% 55%;
+  }
+  body {
+    font-family: 'Work Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: 0.01em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+  .handcrafted-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a7896d' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .clay-texture {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238c5a3c' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+  .btn-artisan {
+    @apply px-4 py-2 rounded-md bg-primary text-white font-medium shadow-sm transition-all;
+    @apply hover:bg-primary/90 hover:shadow-md;
+    @apply focus:ring-2 focus:ring-primary/20 focus:outline-none;
+  }
+  .card-artisan {
+    @apply bg-white dark:bg-card rounded-lg border border-amber-200/60 dark:border-amber-900/40;
+    @apply shadow-sm hover:shadow-md transition-all;
+    @apply overflow-hidden;
+  }
+  .input-artisan {
+    @apply px-4 py-2 rounded-md bg-white dark:bg-card;
+    @apply border border-amber-200/60 dark:border-amber-900/40;
+    @apply text-sm focus:outline-none focus:ring-2 focus:ring-primary/30;
+    @apply placeholder:text-muted-foreground;
+  }
+}
